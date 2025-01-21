@@ -1,13 +1,26 @@
 import React, {useState, useEffect} from "react";
+import { getCountStart } from "../../virtualAPI/data";
 
 
 const FComponent = ({message}) => {
-//on mount
-// useState equivelent to state in Class components
-const [count, setCount] = useState(0);
-//useEffect equivalent to componentDidMount in Class components
-useEffect(()=>{
+  //on mount
+  // useState equivelent to state in Class components
+  const [count, setCount] = useState(0);
 
+  //useEffect equivalent to componentDidMount in Class components
+  useEffect(()=>{
+  //fetch the count from the virtual API upon mounting 
+  const fetchData = () => {
+    try {
+      const getNumber = getCountStart();
+      console.log("get Number ",getNumber.count);
+      setCount(getNumber.count);
+      console.log(count)
+    }catch(err) {
+      console.error(err)
+    }
+  };
+  fetchData();
   //cleanup acts like componentWillMount
   return ()=>{}
 }, []);

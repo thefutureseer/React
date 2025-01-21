@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FComponent message="hello f component"/>
+        <FComponent message="Hello Fcomponent with virtual API / state / props"/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.

@@ -1,4 +1,5 @@
-import FComponent from './components/functional/fComponent';
+import FComponent from './components/functional/FComponent';
+import ClassComponent from './components/class/ClassComponent';
 import logo from './logo.svg';
 import './styles/App.css';
 
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FComponent message="Hello Fcomponent with virtual API / state / props"/>
+        <FComponent message="Hello FComponent with virtual API / state / props"/>
+        <ClassComponent message="Hello ClassComponent w vapi / s/ p"/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.

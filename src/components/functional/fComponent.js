@@ -15,14 +15,13 @@ const FComponent = ({message}) => {
       const getNumber = getCountStart();
       console.log("get Number ",getNumber.count);
       setCount(getNumber.count);
-      console.log(count)
     }catch(err) {
       console.error(err)
     }
   };
   fetchData();
-  //cleanup acts like componentWillMount
-  return ()=>{}
+  //cleanup. acts like componentWillMount
+  // return ()=>{}
 }, []);
 
 //props example message is passed as a prop string "hello functional component"

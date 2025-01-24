@@ -8,8 +8,6 @@ import './styles/App.css';
 
 
 function App() {
-    //1) set up state for contextAPI
-const [user, setUser] = useState({name:"Mr count", age: 20});
 
   return (
     <div className="App">

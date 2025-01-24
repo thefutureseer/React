@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import { myContextAPI, ParentComponent } from './stateManagement/contextAPI/context';
+import { MyContextProvider } from './stateManagement/contextAPI/MyContext';
+import { ParentComponent } from './stateManagement/contextAPI/ParentComponent';
 import FComponent from './components/functional/FComponent';
 import ClassComponent from './components/class/ClassComponent';
 import logo from './logo.svg';
 import './styles/App.css';
-
-// const myContextAPI = createContext();
 
 
 function App() {
@@ -15,9 +14,9 @@ const [user, setUser] = useState({name:"Mr count", age: 20});
   return (
     <div className="App">
       <header className="App-header">
-        <myContextAPI.Provider value={user}>
-         <ParentComponent></ParentComponent>
-        </myContextAPI.Provider>
+        <MyContextProvider>
+         <ParentComponent/>
+        </MyContextProvider>
         <FComponent message="Hello FComponent with virtual API / state / props"/>
         <ClassComponent message="Hello ClassComponent w vapi / s/ p"/>
         <img src={logo} className="App-logo" alt="logo" />

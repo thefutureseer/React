@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { MyContextProvider } from './stateManagement/contextAPI/MyContext';
 import { ParentComponent } from './stateManagement/contextAPI/ParentComponent';
-import FComponent from './components/functional/FComponent';
-import ClassComponent from './components/class/ClassComponent';
+import CounterWithReducer from './stateManagement/reducer/CountReducer';
+// import FComponent from './components/functional/FComponent';
+// import ClassComponent from './components/class/ClassComponent';
 import logo from './logo.svg';
 import './styles/App.css';
 
@@ -15,10 +16,9 @@ function App() {
         <MyContextProvider>
          <ParentComponent/>
         </MyContextProvider>
-        <FComponent message="Hello FComponent with virtual API / state / props"/>
-        <ClassComponent message="Hello ClassComponent w vapi / s/ p"/>
+        <CounterWithReducer/>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -28,7 +28,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );

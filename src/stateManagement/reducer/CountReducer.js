@@ -78,5 +78,5 @@ const CounterWithReducer = () => {
     </div>
   )
 };
-// AL2ET
+// AL2ET time
 export default CounterWithReducer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MyContextProvider } from './stateManagement/contextAPI/MyContext';
 import { ParentComponent } from './stateManagement/contextAPI/ParentComponent';
-import CounterWithReducer from './stateManagement/reducer/CountReducer';
+import CounterWithReducer from './stateManagement/reducer/CountWithReducer';
 // import FComponent from './components/functional/FComponent';
 // import ClassComponent from './components/class/ClassComponent';
 import logo from './logo.svg';

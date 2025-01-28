@@ -1,10 +1,10 @@
-import { useReducer } from "react";
+import React, { useReducer } from "react";
 import counterSlice, {initialState} from "./counterSlice";
 import { increment, decrement, resetCount, setCount } from './actionCreators';
 
-//3. Create the counter component
+// Create the counter component
 const CounterWithReducer = () => {
-  // Step 4: Initialize useReducer with the reducer function and initial stat
+  // Initialize useReducer with the reducer function and initial stat
   const [state, dispatch] = useReducer(counterSlice, initialState);
 
   const handleSet = (event) => {
@@ -29,10 +29,10 @@ const CounterWithReducer = () => {
     transition: "all 0.3s ease",
   };
 
-  // step 5: return JSX to render the counter and buttons
+  //return JSX to render the counter and buttons
   return (
     <div style={{textAlign:"center", marginTop:"50px"}}>
-      <h1>My current number is {state.count}</h1>
+      <h1>my current number is {state.count}</h1>
 
       <button 
         onClick={()=>{dispatch(increment())}}

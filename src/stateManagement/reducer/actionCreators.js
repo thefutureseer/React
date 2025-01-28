@@ -1,4 +1,4 @@
-// import { type } from "@testing-library/user-event/dist/type";
+import { type } from "@testing-library/user-event/dist/type";
 import actionTypes from "./action";
 
 export const decrement = () => ({type: actionTypes.DECREMENT});

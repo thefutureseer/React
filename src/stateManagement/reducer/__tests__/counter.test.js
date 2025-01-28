@@ -6,6 +6,20 @@ import CounterWithReducer from "../CountWithReducer"; // Adjust path if using __
 
 describe("CounterWithReducer Component", () => {
 
+  test("increments the count when Plus One is clicked", () => {
+    render(<CounterWithReducer />);
+    const incrementButton = screen.getByText(/Plus one/i);
+    fireEvent.click(incrementButton);
+    expect(screen.getByText(/my current number is 223/i)).toBeInTheDocument();
+  });
+
+  test("decrements the count when Minus One is clicked", () => {
+    render(<CounterWithReducer />);
+    const decrementButton = screen.getByText(/Minus one/i);
+    fireEvent.click(decrementButton);
+    expect(screen.getByText(/my current number is 221/i)).toBeInTheDocument();
+  });
+
   test("sets the count when a valid number is input", () => {
     render(<CounterWithReducer />);
     const input = screen.getByPlaceholderText(/set your fav #/i);
